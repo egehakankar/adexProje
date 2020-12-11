@@ -1,0 +1,10 @@
+.paper {
+    margin-Top: 64px;
+    display: 'flex';
+    flex-Direction: 'column';
+    align-Items: 'center';
+}
+
+.submit {
+    margin-bottom: 16px !important;
+}
