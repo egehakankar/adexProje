@@ -62,7 +62,7 @@ class SignUp extends Component {
                             required
                             fullWidth
                             id="email"
-                            label="Email Address & Username"
+                            label="Email Address"
                             name="email"
                             autoComplete="email"
                             autoFocus

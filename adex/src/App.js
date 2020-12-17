@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import './App.css';
 import SignIn from "./Components/SignIn.js"
 import SignUp from "./Components/SignUp.js"
+import UserHomePage from "./Components/User/HomePage.js"
 
 class App extends Component {
   constructor() {
@@ -26,6 +27,7 @@ class App extends Component {
         <div className="App">
           <Route exact path="/signin"><SignIn /></Route>
           <Route exact path="/signup"><SignUp /></Route>
+          <Route exact path="/userhomepage"><UserHomePage /></Route>
         </div>
       </Router>
     )
