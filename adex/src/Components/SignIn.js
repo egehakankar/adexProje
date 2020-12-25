@@ -86,7 +86,7 @@ class SignIn extends Component {
     render() {
         if(this.state.check) 
         {
-            return <Redirect to="./userhomepage" />
+            return <Redirect to="./user/main" />
         }
         return (
             <Container component="main" maxWidth="xs">

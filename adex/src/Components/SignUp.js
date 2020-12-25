@@ -32,7 +32,7 @@ class SignUp extends Component {
             <Container component="main" maxWidth="xs">
                 <CssBaseline />
                 <div className="paper">
-                <img src={logo} alt="Logo" style = {{width: '396px'}}/>
+                    <img src={logo} alt="Logo" style={{ width: '396px' }} />
                     <form className="form" noValidate>
                         <Select
                             labelId="demo-simple-select-outlined-label"
@@ -77,7 +77,7 @@ class SignUp extends Component {
                             type="password"
                             id="password"
                         />
-                        
+
                         <Button
                             type="submit"
                             fullWidth
