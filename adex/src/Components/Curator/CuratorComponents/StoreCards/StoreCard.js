@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Modal, Card, CardImg, CardBody, CardTitle, ListGroup, ListGroupItem, Button, Label, Input } from 'reactstrap';
+import { Progress , Card, CardImg, CardBody, CardTitle, ListGroup, ListGroupItem, Button, Label, Input } from 'reactstrap';
 import axios from 'axios';
 import TextField from '@material-ui/core/TextField';
 
@@ -81,7 +81,6 @@ class StoreCard extends Component {
                     data: this.state
                 })
                     .then(result => {
-                        console.log(result.data.reviews)
                         this.setState({ reviews: result.data.reviews });
                     })
                     .catch(error => this.setState({ error: error.message }));
@@ -95,11 +94,18 @@ class StoreCard extends Component {
         if (this.state.checkRI) {
             reviewsDD = this.state.reviews.map(function (reviewsD, index) {
                 return (
-                    <ListGroup key={index} flush>
-                        <ListGroupItem>
-                            <Button color="warning" disabled>{index + 1}: {reviewsD.textO}</Button>
-                        </ListGroupItem>
-                    </ListGroup>
+                    <div key={index} style = {{border: "2px solid gray", padding: "20px", margin: "5px", borderRadius: "20px"}}>
+                        <h2 style={{marginTop: "0px"}}><b>{reviewsD.username}</b></h2>
+                        <h5><u><i>{reviewsD.textO}</i></u></h5>
+                        <div className="progress-container progress-success">
+                            <span className="progress-badge">Rating</span>
+                            <Progress
+                                max="100"
+                                value={reviewsD.ratingO * 100 / 5} 
+                                barClassName="progress-bar-success"
+                            />
+                        </div>
+                    </div>
                 )
             }, this).reverse();
         }
