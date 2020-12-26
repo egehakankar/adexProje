@@ -60,7 +60,6 @@ class LibraryCard extends Component {
 
     async seeMods(event) {
         event.preventDefault();
-        //Balance Increase Div Show
         if (this.state.checkMI) {
             this.setState({ checkMI: false });
         }
