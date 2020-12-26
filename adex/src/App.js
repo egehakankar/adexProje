@@ -5,6 +5,7 @@ import './App.css';
 import SignIn from "./Components/SignIn.js"
 import SignUp from "./Components/SignUp.js"
 import User from "./Components/User/User.js"
+import Curator from "./Components/Curator/Curator.js"
 
 class App extends Component {
   constructor() {
@@ -28,6 +29,7 @@ class App extends Component {
           <Route exact path="/signin"><SignIn /></Route>
           <Route exact path="/signup"><SignUp /></Route>
           <Route path="/user"><User /></Route>
+          <Route path="/curator"><Curator /></Route>
         </div>
       </Router>
     )

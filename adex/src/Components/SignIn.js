@@ -86,7 +86,22 @@ class SignIn extends Component {
     render() {
         if(this.state.check) 
         {
-            return <Redirect to="./user/main" />
+            if(this.state.age === 'User')
+            {
+                return <Redirect to="./user/main" />
+            }
+            else if(this.state.age === 'Curator')
+            {
+                return <Redirect to="./curator/main" />
+            }
+            else if(this.state.age === 'Publisher')
+            {
+                return <Redirect to="./publisher/main" />
+            }
+            else if(this.state.age === 'Developer')
+            {
+                return <Redirect to="./developer/main" />
+            }
         }
         return (
             <Container component="main" maxWidth="xs">
